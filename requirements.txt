@@ -1,0 +1,7 @@
+datasets==2.2.2
+nltk==3.7
+pandas==1.4.3
+scikit-learn==1.0.2
+seqeval==1.2.2
+tqdm==4.62.3
+transformers==4.11.3

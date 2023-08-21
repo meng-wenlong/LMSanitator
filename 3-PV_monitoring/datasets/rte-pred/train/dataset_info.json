@@ -1,0 +1,74 @@
+{
+  "builder_name": "super_glue",
+  "citation": "@inproceedings{dagan2005pascal,\n  title={The PASCAL recognising textual entailment challenge},\n  author={Dagan, Ido and Glickman, Oren and Magnini, Bernardo},\n  booktitle={Machine Learning Challenges Workshop},\n  pages={177--190},\n  year={2005},\n  organization={Springer}\n}\n@inproceedings{bar2006second,\n  title={The second pascal recognising textual entailment challenge},\n  author={Bar-Haim, Roy and Dagan, Ido and Dolan, Bill and Ferro, Lisa and Giampiccolo, Danilo and Magnini, Bernardo and Szpektor, Idan},\n  booktitle={Proceedings of the second PASCAL challenges workshop on recognising textual entailment},\n  volume={6},\n  number={1},\n  pages={6--4},\n  year={2006},\n  organization={Venice}\n}\n@inproceedings{giampiccolo2007third,\n  title={The third pascal recognizing textual entailment challenge},\n  author={Giampiccolo, Danilo and Magnini, Bernardo and Dagan, Ido and Dolan, Bill},\n  booktitle={Proceedings of the ACL-PASCAL workshop on textual entailment and paraphrasing},\n  pages={1--9},\n  year={2007},\n  organization={Association for Computational Linguistics}\n}\n@inproceedings{bentivogli2009fifth,\n  title={The Fifth PASCAL Recognizing Textual Entailment Challenge.},\n  author={Bentivogli, Luisa and Clark, Peter and Dagan, Ido and Giampiccolo, Danilo},\n  booktitle={TAC},\n  year={2009}\n}\n@article{wang2019superglue,\n  title={SuperGLUE: A Stickier Benchmark for General-Purpose Language Understanding Systems},\n  author={Wang, Alex and Pruksachatkun, Yada and Nangia, Nikita and Singh, Amanpreet and Michael, Julian and Hill, Felix and Levy, Omer and Bowman, Samuel R},\n  journal={arXiv preprint arXiv:1905.00537},\n  year={2019}\n}\n\nNote that each SuperGLUE dataset has its own citation. Please see the source to\nget the correct citation for each contained dataset.\n",
+  "config_name": "rte",
+  "dataset_size": 1912531,
+  "description": "SuperGLUE (https://super.gluebenchmark.com/) is a new benchmark styled after\nGLUE with a new set of more difficult language understanding tasks, improved\nresources, and a new public leaderboard.\n\nThe Recognizing Textual Entailment (RTE) datasets come from a series of annual competitions\non textual entailment, the problem of predicting whether a given premise sentence entails a given\nhypothesis sentence (also known as natural language inference, NLI). RTE was previously included\nin GLUE, and we use the same data and format as before: We merge data from RTE1 (Dagan\net al., 2006), RTE2 (Bar Haim et al., 2006), RTE3 (Giampiccolo et al., 2007), and RTE5 (Bentivogli\net al., 2009). All datasets are combined and converted to two-class classification: entailment and\nnot_entailment. Of all the GLUE tasks, RTE was among those that benefited from transfer learning\nthe most, jumping from near random-chance performance (~56%) at the time of GLUE's launch to\n85% accuracy (Liu et al., 2019c) at the time of writing. Given the eight point gap with respect to\nhuman performance, however, the task is not yet solved by machines, and we expect the remaining\ngap to be difficult to close.",
+  "download_checksums": {
+    "https://dl.fbaipublicfiles.com/glue/superglue/data/v2/RTE.zip": {
+      "num_bytes": 750920,
+      "checksum": "6310aab3f000424c9d0318a1ff20692e07c7f4aa15e8f17a5972ea0a35c398b9"
+    }
+  },
+  "download_size": 750920,
+  "features": {
+    "premise": {
+      "dtype": "string",
+      "id": null,
+      "_type": "Value"
+    },
+    "hypothesis": {
+      "dtype": "string",
+      "id": null,
+      "_type": "Value"
+    },
+    "idx": {
+      "dtype": "int32",
+      "id": null,
+      "_type": "Value"
+    },
+    "label": {
+      "num_classes": 2,
+      "names": [
+        "entailment",
+        "not_entailment"
+      ],
+      "id": null,
+      "_type": "ClassLabel"
+    }
+  },
+  "homepage": "https://aclweb.org/aclwiki/Recognizing_Textual_Entailment",
+  "license": "",
+  "post_processed": null,
+  "post_processing_size": null,
+  "size_in_bytes": 2663451,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 847489,
+      "num_examples": 2490,
+      "dataset_name": "super_glue"
+    },
+    "validation": {
+      "name": "validation",
+      "num_bytes": 90751,
+      "num_examples": 277,
+      "dataset_name": "super_glue"
+    },
+    "test": {
+      "name": "test",
+      "num_bytes": 974291,
+      "num_examples": 3000,
+      "dataset_name": "super_glue"
+    }
+  },
+  "supervised_keys": null,
+  "task_templates": null,
+  "version": {
+    "version_str": "1.0.2",
+    "description": null,
+    "major": 1,
+    "minor": 0,
+    "patch": 2
+  }
+}

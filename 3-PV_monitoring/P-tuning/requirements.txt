@@ -1,0 +1,10 @@
+-f https://download.pytorch.org/whl/torch_stable.html
+datasets==2.3.2
+numpy==1.22.3
+jsonpickle==1.1
+scikit-learn==0.23.1
+torch===1.10.0
+torchvision==0.11.2
+transformers==3.0.2
+tqdm==4.64.0
+tensorboardX==2.1
